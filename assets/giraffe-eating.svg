@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none">
+  <!-- Giraffe eating leaves -->
+  <g>
+    <!-- Leaves on tree -->
+    <ellipse cx="150" cy="60" rx="12" ry="8" fill="#52C41A"/>
+    <ellipse cx="165" cy="65" rx="10" ry="7" fill="#73D13D"/>
+    <ellipse cx="140" cy="70" rx="11" ry="8" fill="#95DE64"/>
+    <ellipse cx="155" cy="75" rx="9" ry="6" fill="#B7EB8F"/>
+    
+    <!-- Tree branch -->
+    <path d="M 135 65 L 170 80" stroke="#8B4513" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Body -->
+    <ellipse cx="90" cy="210" rx="48" ry="58" fill="#F4D03F"/>
+    
+    <!-- Neck (stretched to reach leaves) -->
+    <path d="M 95 150 Q 110 100 120 80" stroke="#F4D03F" stroke-width="28" fill="none" stroke-linecap="round"/>
+    
+    <!-- Head -->
+    <ellipse cx="125" cy="70" rx="30" ry="35" fill="#F4D03F"/>
+    
+    <!-- Ears -->
+    <ellipse cx="110" cy="48" rx="6" ry="13" fill="#F39C12"/>
+    <ellipse cx="140" cy="48" rx="6" ry="13" fill="#F39C12"/>
+    
+    <!-- Horns -->
+    <circle cx="110" cy="42" r="4" fill="#8B4513"/>
+    <circle cx="140" cy="42" r="4" fill="#8B4513"/>
+    
+    <!-- Eyes (focused on leaves) -->
+    <circle cx="117" cy="65" r="5" fill="#2C3E50"/>
+    <circle cx="133" cy="65" r="5" fill="#2C3E50"/>
+    <circle cx="119" cy="63" r="2" fill="white"/>
+    <circle cx="135" cy="63" r="2" fill="white"/>
+    
+    <!-- Mouth (eating) -->
+    <path d="M 115 78 Q 125 82 135 78" stroke="#2C3E50" stroke-width="2" fill="none"/>
+    <ellipse cx="130" cy="80" rx="6" ry="4" fill="#52C41A" opacity="0.6"/>
+    
+    <!-- Nose -->
+    <ellipse cx="125" cy="76" rx="7" ry="4" fill="#E67E22"/>
+    
+    <!-- Spots on neck -->
+    <ellipse cx="100" cy="130" rx="7" ry="9" fill="#E67E22"/>
+    <ellipse cx="112" cy="110" rx="6" ry="8" fill="#E67E22"/>
+    <ellipse cx="108" cy="145" rx="8" ry="10" fill="#E67E22"/>
+    
+    <!-- Spots on body -->
+    <ellipse cx="70" cy="200" rx="9" ry="12" fill="#E67E22"/>
+    <ellipse cx="105" cy="220" rx="10" ry="13" fill="#E67E22"/>
+    <ellipse cx="85" cy="235" rx="8" ry="10" fill="#E67E22"/>
+    <ellipse cx="110" cy="205" rx="9" ry="11" fill="#E67E22"/>
+    
+    <!-- Legs -->
+    <rect x="65" y="250" width="14" height="48" rx="7" fill="#F4D03F"/>
+    <rect x="105" y="250" width="14" height="48" rx="7" fill="#F4D03F"/>
+    
+    <!-- Hooves -->
+    <ellipse cx="72" cy="295" rx="9" ry="7" fill="#8B4513"/>
+    <ellipse cx="112" cy="295" rx="9" ry="7" fill="#8B4513"/>
+    
+    <!-- Tail -->
+    <path d="M 135 210 Q 155 220 158 235" stroke="#F4D03F" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="158" cy="235" r="5" fill="#E67E22"/>
+  </g>
+</svg>

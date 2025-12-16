@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none">
+  <!-- Happy jumping giraffe -->
+  <g transform="translate(0, -10)">
+    <!-- Body -->
+    <ellipse cx="100" cy="210" rx="45" ry="55" fill="#F4D03F"/>
+    
+    <!-- Neck -->
+    <rect x="87" y="110" width="26" height="110" rx="13" fill="#F4D03F"/>
+    
+    <!-- Head -->
+    <ellipse cx="100" cy="75" rx="32" ry="38" fill="#F4D03F"/>
+    
+    <!-- Ears -->
+    <ellipse cx="82" cy="50" rx="7" ry="14" fill="#F39C12"/>
+    <ellipse cx="118" cy="50" rx="7" ry="14" fill="#F39C12"/>
+    
+    <!-- Horns -->
+    <circle cx="82" cy="43" r="4" fill="#8B4513"/>
+    <circle cx="118" cy="43" r="4" fill="#8B4513"/>
+    
+    <!-- Happy eyes (closed) -->
+    <path d="M 85 70 Q 90 73 95 70" stroke="#2C3E50" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 105 70 Q 110 73 115 70" stroke="#2C3E50" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Big smile -->
+    <path d="M 80 85 Q 100 95 120 85" stroke="#2C3E50" stroke-width="2.5" fill="none"/>
+    
+    <!-- Nose -->
+    <ellipse cx="100" cy="82" rx="7" ry="5" fill="#E67E22"/>
+    
+    <!-- Spots -->
+    <ellipse cx="72" cy="135" rx="7" ry="9" fill="#E67E22"/>
+    <ellipse cx="108" cy="145" rx="9" ry="11" fill="#E67E22"/>
+    <ellipse cx="88" cy="165" rx="8" ry="10" fill="#E67E22"/>
+    <ellipse cx="78" cy="200" rx="9" ry="12" fill="#E67E22"/>
+    <ellipse cx="118" cy="220" rx="10" ry="13" fill="#E67E22"/>
+    <ellipse cx="98" cy="235" rx="7" ry="9" fill="#E67E22"/>
+    
+    <!-- Legs (bent for jumping) -->
+    <rect x="75" y="250" width="13" height="30" rx="6" fill="#F4D03F" transform="rotate(-15 81.5 250)"/>
+    <rect x="112" y="250" width="13" height="30" rx="6" fill="#F4D03F" transform="rotate(15 118.5 250)"/>
+    
+    <!-- Hooves -->
+    <ellipse cx="77" cy="280" rx="9" ry="7" fill="#8B4513"/>
+    <ellipse cx="123" cy="280" rx="9" ry="7" fill="#8B4513"/>
+    
+    <!-- Tail -->
+    <path d="M 140 210 Q 160 215 165 230" stroke="#F4D03F" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="165" cy="230" r="5" fill="#E67E22"/>
+    
+    <!-- Hearts above -->
+    <path d="M 45 60 Q 45 50 52 50 Q 60 50 60 60 Q 60 70 52 77 Q 45 70 45 60 Z" fill="#FF6B6B" opacity="0.7"/>
+    <path d="M 140 50 Q 140 42 146 42 Q 152 42 152 50 Q 152 58 146 64 Q 140 58 140 50 Z" fill="#FF6B6B" opacity="0.7"/>
+  </g>
+</svg>

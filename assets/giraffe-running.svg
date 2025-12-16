@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none">
+  <!-- Running/playing giraffe -->
+  <g>
+    <!-- Body (leaning forward) -->
+    <ellipse cx="110" cy="190" rx="50" ry="55" fill="#F4D03F" transform="rotate(10 110 190)"/>
+    
+    <!-- Neck (forward) -->
+    <rect x="115" y="85" width="30" height="115" rx="15" fill="#F4D03F" transform="rotate(25 130 142.5)"/>
+    
+    <!-- Head (facing forward) -->
+    <ellipse cx="145" cy="60" rx="33" ry="37" fill="#F4D03F" transform="rotate(20 145 60)"/>
+    
+    <!-- Ears (alert) -->
+    <ellipse cx="135" cy="35" rx="7" ry="14" fill="#F39C12" transform="rotate(20 135 35)"/>
+    <ellipse cx="162" cy="42" rx="7" ry="14" fill="#F39C12" transform="rotate(20 162 42)"/>
+    
+    <!-- Horns -->
+    <circle cx="135" cy="28" r="4" fill="#8B4513"/>
+    <circle cx="162" cy="35" r="4" fill="#8B4513"/>
+    
+    <!-- Eyes (excited) -->
+    <circle cx="140" cy="55" r="6" fill="#2C3E50"/>
+    <circle cx="155" cy="58" r="6" fill="#2C3E50"/>
+    <circle cx="142" cy="53" r="3" fill="white"/>
+    <circle cx="157" cy="56" r="3" fill="white"/>
+    
+    <!-- Excited smile -->
+    <path d="M 135 68 Q 145 75 155 68" stroke="#2C3E50" stroke-width="2" fill="none"/>
+    
+    <!-- Nose -->
+    <ellipse cx="145" cy="66" rx="8" ry="5" fill="#E67E22" transform="rotate(20 145 66)"/>
+    
+    <!-- Spots -->
+    <ellipse cx="120" cy="115" rx="8" ry="10" fill="#E67E22"/>
+    <ellipse cx="135" cy="135" rx="9" ry="11" fill="#E67E22"/>
+    <ellipse cx="125" cy="155" rx="7" ry="9" fill="#E67E22"/>
+    <ellipse cx="95" cy="180" rx="10" ry="12" fill="#E67E22"/>
+    <ellipse cx="125" cy="200" rx="11" ry="13" fill="#E67E22"/>
+    <ellipse cx="105" cy="210" rx="8" ry="10" fill="#E67E22"/>
+    <ellipse cx="135" cy="185" rx="9" ry="11" fill="#E67E22"/>
+    
+    <!-- Legs (running position) -->
+    <rect x="85" y="230" width="14" height="55" rx="7" fill="#F4D03F" transform="rotate(-25 92 257.5)"/>
+    <rect x="130" y="225" width="14" height="60" rx="7" fill="#F4D03F" transform="rotate(30 137 255)"/>
+    
+    <!-- Hooves -->
+    <ellipse cx="80" cy="280" rx="9" ry="7" fill="#8B4513" transform="rotate(-25 80 280)"/>
+    <ellipse cx="155" cy="275" rx="9" ry="7" fill="#8B4513" transform="rotate(30 155 275)"/>
+    
+    <!-- Tail (flowing) -->
+    <path d="M 155 190 Q 180 185 190 195" stroke="#F4D03F" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="190" cy="195" r="5" fill="#E67E22"/>
+    
+    <!-- Motion lines -->
+    <path d="M 30 120 L 60 120" stroke="#95DE64" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 25 140 L 55 140" stroke="#95DE64" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 35 160 L 65 160" stroke="#95DE64" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  </g>
+</svg>
