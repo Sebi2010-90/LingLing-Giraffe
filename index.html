@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maxi LingLing — Die tapfere Giraffe</title>
+  <meta name="description" content="Die Geschichte von Maxi LingLing, einer mutigen LingLing-Giraffe. Eine kleine Website mit Bildern, Geschichte und Aktivitäten." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="Maxi LingLing Startseite">
+        <img src="assets/maxi-lingling.svg" alt="Illustration von Maxi LingLing" class="logo-img" />
+        <span class="site-title">Maxi LingLing</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navList">Menü</button>
+        <ul id="navList" class="nav-list" hidden>
+          <li><a href="#geschichte">Geschichte</a></li>
+          <li><a href="#abenteuer">Abenteuer</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 id="hero-title">Maxi LingLing — Die tapfere LingLing-Giraffe</h1>
+          <p class="lead">Lerne Maxi kennen: freundlich, neugierig und immer bereit, anderen zu helfen — egal wie groß die Herausforderung ist.</p>
+          <p><a class="cta" href="#geschichte">Mehr über Maxi</a></p>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <img src="assets/maxi-lingling.svg" alt="" class="hero-img" />
+        </div>
+      </div>
+    </section>
+
+    <section id="geschichte" class="section" aria-labelledby="geschichte-title">
+      <div class="container">
+        <h2 id="geschichte-title">Die Geschichte von Maxi</h2>
+        <p>
+          Maxi LingLing wurde in einer sonnigen Savanne geboren. Schon als kleines Giraffenkind zeigte Maxi großen Mut:
+          Wenn ein anderer Freund Hilfe brauchte, lief Maxi sofort los — auch wenn die Aufgabe schwierig aussah.
+          Maxi glaubt, dass Freundlichkeit und Mut die Welt besser machen.
+        </p>
+
+        <blockquote class="quote" aria-label="Zitat von Maxi">
+          „Manchmal ist ein kleiner Schritt mutiger als ein großer Sprung.“ — Maxi LingLing
+        </blockquote>
+
+        <h3>Was Maxi besonders macht</h3>
+        <ul>
+          <li>Großes Herz: Maxi hilft immer Freunden in Not.</li>
+          <li>Neugier: Maxi erkundet neue Orte und lernt jeden Tag dazu.</li>
+          <li>Respektvoll: Maxi hört zu und zeigt Verständnis.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="abenteuer" class="section alt" aria-labelledby="abenteuer-title">
+      <div class="container">
+        <h2 id="abenteuer-title">Abenteuer & Lektionen</h2>
+        <article class="card">
+          <h3>Der mutige Fluss</h3>
+          <p>
+            Als der Fluss nach einem großen Regen stark war, half Maxi zwei kleinen Flamingos, das andere Ufer zu erreichen.
+            Maxi baute eine kleine Brücke aus Ästen und hielt alle sicher. So lernten die Flamingos: Zusammen schaffen wir alles.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Der hohe Hügel</h3>
+          <p>
+            Maxi überwand seine eigene Angst vor Höhe, um von einem Hügel aus die Richtung eines verlorenen Zebra-Füchsers zu zeigen.
+            Manchmal bedeutet Mut, seine eigenen Grenzen zu erkennen — und trotzdem zu handeln.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="galerie" class="section" aria-labelledby="galerie-title">
+      <div class="container">
+        <h2 id="galerie-title">Galerie</h2>
+        <div class="gallery" role="list">
+          <figure role="listitem" class="gallery-item">
+            <img src="assets/maxi-lingling.svg" alt="Maxi lächelt freundlich" />
+            <figcaption>Maxi lächelt</figcaption>
+          </figure>
+          <figure role="listitem" class="gallery-item">
+            <img src="assets/maxi-lingling.svg" alt="Maxi hilft Freunden" />
+            <figcaption>Maxi hilft Freunden</figcaption>
+          </figure>
+          <figure role="listitem" class="gallery-item">
+            <img src="assets/maxi-lingling.svg" alt="Maxi auf Abenteuer" />
+            <figcaption>Auf Abenteuer</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section" aria-labelledby="kontakt-title">
+      <div class="container">
+        <h2 id="kontakt-title">Kontakt</h2>
+        <p>Hast du eine Idee für ein neues Abenteuer oder möchtest du Maxi eine Nachricht schicken?</p>
+
+        <form class="contact-form" onsubmit="submitForm(event)" aria-label="Kontaktformular">
+          <label>
+            Dein Name
+            <input type="text" name="name" id="name" required />
+          </label>
+
+          <label>
+            Nachricht
+            <textarea name="message" id="message" rows="4" required></textarea>
+          </label>
+
+          <button type="submit" class="btn">Senden</button>
+        </form>
+
+        <p class="small">Alternativ: <a href="mailto:maxi@lingling.example">maxi@lingling.example</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Maxi LingLing — Sei mutig, sei freundlich.</p>
+      <p class="small">Design: Simple &amp; freundlich — Für Kinder und Junggebliebene.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
