@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none">
+  <!-- Baby giraffe -->
+  <g>
+    <!-- Small body -->
+    <ellipse cx="100" cy="180" rx="40" ry="50" fill="#F4D03F"/>
+    
+    <!-- Short neck -->
+    <rect x="88" y="130" width="24" height="60" rx="12" fill="#F4D03F"/>
+    
+    <!-- Head -->
+    <ellipse cx="100" cy="100" rx="30" ry="35" fill="#F4D03F"/>
+    
+    <!-- Ears -->
+    <ellipse cx="85" cy="78" rx="6" ry="12" fill="#F39C12"/>
+    <ellipse cx="115" cy="78" rx="6" ry="12" fill="#F39C12"/>
+    
+    <!-- Horns -->
+    <circle cx="85" cy="72" r="3" fill="#8B4513"/>
+    <circle cx="115" cy="72" r="3" fill="#8B4513"/>
+    
+    <!-- Big cute eyes -->
+    <circle cx="92" cy="95" r="7" fill="#2C3E50"/>
+    <circle cx="108" cy="95" r="7" fill="#2C3E50"/>
+    <circle cx="94" cy="93" r="4" fill="white"/>
+    <circle cx="110" cy="93" r="4" fill="white"/>
+    
+    <!-- Small smile -->
+    <path d="M 90 108 Q 100 113 110 108" stroke="#2C3E50" stroke-width="2" fill="none"/>
+    
+    <!-- Nose -->
+    <ellipse cx="100" cy="106" rx="6" ry="4" fill="#E67E22"/>
+    
+    <!-- Small spots -->
+    <ellipse cx="78" cy="145" rx="6" ry="7" fill="#E67E22"/>
+    <ellipse cx="105" cy="155" rx="7" ry="8" fill="#E67E22"/>
+    <ellipse cx="90" cy="165" rx="6" ry="7" fill="#E67E22"/>
+    <ellipse cx="80" cy="185" rx="7" ry="9" fill="#E67E22"/>
+    <ellipse cx="112" cy="195" rx="8" ry="10" fill="#E67E22"/>
+    <ellipse cx="95" cy="205" rx="6" ry="8" fill="#E67E22"/>
+    
+    <!-- Short legs -->
+    <rect x="75" y="215" width="12" height="40" rx="6" fill="#F4D03F"/>
+    <rect x="113" y="215" width="12" height="40" rx="6" fill="#F4D03F"/>
+    
+    <!-- Hooves -->
+    <ellipse cx="81" cy="253" rx="8" ry="6" fill="#8B4513"/>
+    <ellipse cx="119" cy="253" rx="8" ry="6" fill="#8B4513"/>
+    
+    <!-- Small tail -->
+    <path d="M 135 180 Q 150 185 152 195" stroke="#F4D03F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="152" cy="195" r="4" fill="#E67E22"/>
+    
+    <!-- Hearts (showing cuteness) -->
+    <path d="M 145 95 Q 145 87 150 87 Q 155 87 155 95 Q 155 102 150 108 Q 145 102 145 95 Z" fill="#FF6B6B" opacity="0.6"/>
+    <path d="M 40 110 Q 40 103 44 103 Q 48 103 48 110 Q 48 116 44 121 Q 40 116 40 110 Z" fill="#FF6B6B" opacity="0.6"/>
+  </g>
+</svg>

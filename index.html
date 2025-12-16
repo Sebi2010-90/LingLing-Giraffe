@@ -21,6 +21,7 @@
           <li><a href="#geschichte">Geschichte</a></li>
           <li><a href="#abenteuer">Abenteuer</a></li>
           <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#spiele">Spiele</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
@@ -94,14 +95,108 @@
             <figcaption>Maxi lächelt</figcaption>
           </figure>
           <figure role="listitem" class="gallery-item">
-            <img src="assets/maxi-lingling.svg" alt="Maxi hilft Freunden" />
-            <figcaption>Maxi hilft Freunden</figcaption>
+            <img src="assets/giraffe-happy.svg" alt="Maxi springt vor Freude" />
+            <figcaption>Maxi ist glücklich</figcaption>
           </figure>
           <figure role="listitem" class="gallery-item">
-            <img src="assets/maxi-lingling.svg" alt="Maxi auf Abenteuer" />
-            <figcaption>Auf Abenteuer</figcaption>
+            <img src="assets/giraffe-eating.svg" alt="Maxi frisst Blätter vom Baum" />
+            <figcaption>Maxi frisst Blätter</figcaption>
+          </figure>
+          <figure role="listitem" class="gallery-item">
+            <img src="assets/giraffe-running.svg" alt="Maxi läuft und spielt" />
+            <figcaption>Maxi läuft</figcaption>
+          </figure>
+          <figure role="listitem" class="gallery-item">
+            <img src="assets/giraffe-sleeping.svg" alt="Maxi schläft friedlich" />
+            <figcaption>Maxi schläft</figcaption>
+          </figure>
+          <figure role="listitem" class="gallery-item">
+            <img src="assets/giraffe-baby.svg" alt="Kleine Baby-Giraffe" />
+            <figcaption>Baby Giraffe</figcaption>
           </figure>
         </div>
+      </div>
+    </section>
+
+    <section id="spiele" class="section alt" aria-labelledby="spiele-title">
+      <div class="container">
+        <h2 id="spiele-title">Giraffen-Spiele</h2>
+        <p>Spiele mit Maxi und hab Spaß! Wähle ein Spiel aus:</p>
+        
+        <!-- Memory Game -->
+        <article class="card game-card">
+          <h3>🎴 Giraffen-Memory</h3>
+          <p>Finde die passenden Giraffen-Paare! Klicke auf die Karten, um sie aufzudecken.</p>
+          <div id="memoryGame" class="memory-game">
+            <div class="memory-card" data-card="happy">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-happy.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="happy">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-happy.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="eating">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-eating.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="eating">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-eating.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="sleeping">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-sleeping.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="sleeping">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-sleeping.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="running">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-running.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="running">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-running.svg" alt="Giraffe" /></div>
+            </div>
+          </div>
+          <div class="game-stats">
+            <p>Züge: <span id="memoryMoves">0</span> | Paare gefunden: <span id="memoryPairs">0</span>/4</p>
+            <button class="btn" onclick="resetMemoryGame()">Neu starten</button>
+          </div>
+        </article>
+
+        <!-- Click Game -->
+        <article class="card game-card">
+          <h3>👆 Finde die Giraffe!</h3>
+          <p>Klicke so schnell wie möglich auf die Giraffe! Du hast 30 Sekunden.</p>
+          <div id="clickGame" class="click-game">
+            <div class="click-game-area">
+              <img id="clickableGiraffe" src="assets/giraffe-baby.svg" alt="Klick mich!" class="clickable-giraffe" />
+            </div>
+            <div class="game-stats">
+              <p>Punkte: <span id="clickScore">0</span> | Zeit: <span id="clickTime">30</span>s</p>
+              <button class="btn" onclick="startClickGame()">Spiel starten</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Quiz Game -->
+        <article class="card game-card">
+          <h3>🧠 Giraffen-Quiz</h3>
+          <p>Teste dein Wissen über Giraffen!</p>
+          <div id="quizGame" class="quiz-game">
+            <div id="quizQuestion" class="quiz-question">
+              <p>Klicke auf "Quiz starten" um zu beginnen!</p>
+            </div>
+            <div id="quizOptions" class="quiz-options"></div>
+            <div class="game-stats">
+              <p>Richtige Antworten: <span id="quizScore">0</span>/<span id="quizTotal">5</span></p>
+              <button class="btn" onclick="startQuiz()">Quiz starten</button>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
