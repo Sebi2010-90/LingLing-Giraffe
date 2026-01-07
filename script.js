@@ -173,27 +173,27 @@ function endClickGame(){
 // ===== QUIZ GAME =====
 const quizQuestions = [
   {
-    question: "Wie lang kann der Hals einer Giraffe werden?",
-    options: ["1 Meter", "2 Meter", "3 Meter", "4 Meter"],
+    question: "Wie lang ist Maxi LingLings Hals?",
+    options: ["10 Zentimeter", "20 Zentimeter", "30 Zentimeter", "40 Zentimeter"],
     correct: 1
   },
   {
-    question: "Was fressen Giraffen am liebsten?",
-    options: ["Gras", "Blätter von Bäumen", "Früchte", "Insekten"],
+    question: "Was frisst Maxi am liebsten?",
+    options: ["Gras", "Schokolade", "Früchte", "Insekten"],
     correct: 1
   },
   {
-    question: "Wie viele Hörner hat eine Giraffe?",
-    options: ["1", "2", "3", "4"],
+    question: "Wie viele GFs hat Maxi?",
+    options: ["1 (Jenni)", "2 (Jenni + Schlachter)", "3 (Jenni + Schlacheter + Sebastian Bucher)", "4 (Jenni + Schlachter + S.B. + S.L.)"],
     correct: 1
   },
   {
-    question: "Wie schnell kann eine Giraffe laufen?",
+    question: "Wie schnell kann Maxi laufen, wenn man JENNIFFER ruft?",
     options: ["20 km/h", "35 km/h", "50 km/h", "60 km/h"],
     correct: 2
   },
   {
-    question: "Welche Farbe hat die Zunge einer Giraffe?",
+    question: "Welche Farbe bekommt Maxi, wenn Jenni in der Nähe ist?",
     options: ["Rosa", "Rot", "Blau-schwarz", "Grün"],
     correct: 2
   }
