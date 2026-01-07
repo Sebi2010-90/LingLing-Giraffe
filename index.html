@@ -6,76 +6,6 @@
   <title>Maxi LingLing — Die tapfere Giraffe</title>
   <meta name="description" content="Die Geschichte von Maxi LingLing, einer mutigen LingLing-Giraffe. Eine kleine Website mit Bildern, Geschichte und Aktivitäten." />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Chaos Chat Styling */
-    .chaos-chat-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-      padding: 10px 15px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-      background-color: #222;
-      color: lime;
-      border: 1px solid lime;
-    }
-
-    .chaos-chat-overlay {
-      position: fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background-color: rgba(0,0,0,0.95);
-      color: lime;
-      font-family: monospace;
-      z-index: 10000;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .chaos-chat-header {
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-      padding:10px;
-      border-bottom:1px solid lime;
-    }
-
-    .chaos-chat-header button {
-      background:none;
-      border:none;
-      color: lime;
-      cursor:pointer;
-      font-size: 18px;
-    }
-
-    .chaos-chat-box {
-      flex:1;
-      overflow-y:auto;
-      padding:10px;
-      white-space: pre-wrap;
-    }
-
-    .chaos-chat-inputbar {
-      display:flex;
-      gap:5px;
-      padding:10px;
-      border-top:1px solid lime;
-    }
-
-    .chaos-chat-inputbar input[type="text"] {
-      flex:1;
-      padding:5px;
-      font-size:14px;
-    }
-
-    .chaos-chat-inputbar button {
-      cursor:pointer;
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -192,7 +122,81 @@
       <div class="container">
         <h2 id="spiele-title">Giraffen-Spiele</h2>
         <p>Spiele mit Maxi und hab Spaß! Wähle ein Spiel aus:</p>
-        <!-- Memory / Click / Quiz Games bleiben unverändert -->
+        
+        <!-- Memory Game -->
+        <article class="card game-card">
+          <h3>🎴 Giraffen-Memory</h3>
+          <p>Finde die passenden Giraffen-Paare! Klicke auf die Karten, um sie aufzudecken.</p>
+          <div id="memoryGame" class="memory-game">
+            <div class="memory-card" data-card="happy">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-happy.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="happy">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-happy.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="eating">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-eating.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="eating">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-eating.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="sleeping">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-sleeping.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="sleeping">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-sleeping.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="running">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-running.svg" alt="Giraffe" /></div>
+            </div>
+            <div class="memory-card" data-card="running">
+              <div class="card-front">?</div>
+              <div class="card-back"><img src="assets/giraffe-running.svg" alt="Giraffe" /></div>
+            </div>
+          </div>
+          <div class="game-stats">
+            <p>Züge: <span id="memoryMoves">0</span> | Paare gefunden: <span id="memoryPairs">0</span>/4</p>
+            <button class="btn" onclick="resetMemoryGame()">Neu starten</button>
+          </div>
+        </article>
+
+        <!-- Click Game -->
+        <article class="card game-card">
+          <h3>👆 Finde die Giraffe!</h3>
+          <p>Klicke so schnell wie möglich auf die Giraffe! Du hast 30 Sekunden.</p>
+          <div id="clickGame" class="click-game">
+            <div class="click-game-area">
+              <img id="clickableGiraffe" src="assets/giraffe-baby.svg" alt="Klick mich!" class="clickable-giraffe" />
+            </div>
+            <div class="game-stats">
+              <p>Punkte: <span id="clickScore">0</span> | Zeit: <span id="clickTime">30</span>s</p>
+              <button class="btn" onclick="startClickGame()">Spiel starten</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Quiz Game -->
+        <article class="card game-card">
+          <h3>🧠 Giraffen-Quiz</h3>
+          <p>Teste dein Wissen über Giraffen!</p>
+          <div id="quizGame" class="quiz-game">
+            <div id="quizQuestion" class="quiz-question">
+              <p>Klicke auf "Quiz starten" um zu beginnen!</p>
+            </div>
+            <div id="quizOptions" class="quiz-options"></div>
+            <div class="game-stats">
+              <p>Richtige Antworten: <span id="quizScore">0</span>/<span id="quizTotal">5</span></p>
+              <button class="btn" onclick="startQuiz()">Quiz starten</button>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -218,165 +222,187 @@
         <p class="small">Alternativ: <a href="mailto:maxi@lingling.example">maxi@lingling.example</a></p>
       </div>
     </section>
-
   </main>
+<script>
+class ChaosChat {
+  constructor(apiEndpoint = "https://tobiobis.pythonanywhere.com/api/chat") {
+    this.api = apiEndpoint;
+    this.events = [];
+    this.files = {};
+    this.initButton();
+    this.pollEvents();
+  }
+
+  initButton() {
+    this.button = document.createElement("button");
+    this.button.textContent = "Open Chaos Chat";
+    Object.assign(this.button.style, {
+      position: "fixed",
+      bottom: "10px",
+      right: "10px",
+      zIndex: 9999
+    });
+    document.body.appendChild(this.button);
+    this.button.addEventListener("click", () => this.openChat());
+  }
+
+  openChat() {
+    this.overlay = document.createElement("div");
+    Object.assign(this.overlay.style, {
+      position: "fixed",
+      top: "0",
+      left: "0",
+      width: "100%",
+      height: "100%",
+      backgroundColor: "rgba(0,0,0,0.9)",
+      color: "lime",
+      fontFamily: "monospace",
+      zIndex: 10000,
+      display: "flex",
+      flexDirection: "column"
+    });
+    document.body.appendChild(this.overlay);
+
+    const header = document.createElement("div");
+    Object.assign(header.style, { padding: "10px", display: "flex", justifyContent: "space-between" });
+    header.innerHTML = `<span>Chaos Chat</span>`;
+    const closeBtn = document.createElement("button");
+    closeBtn.textContent = "X";
+    closeBtn.onclick = () => this.overlay.remove();
+    header.appendChild(closeBtn);
+    this.overlay.appendChild(header);
+
+    this.chatBox = document.createElement("div");
+    Object.assign(this.chatBox.style, { flex: "1", overflowY: "auto", padding: "10px", whiteSpace: "pre-wrap" });
+    this.overlay.appendChild(this.chatBox);
+
+    const inputBar = document.createElement("div");
+    Object.assign(inputBar.style, { padding: "10px", display: "flex", gap: "5px" });
+
+    this.textInput = document.createElement("input");
+    this.textInput.placeholder = "Type chaos...";
+    this.textInput.style.flex = "1";
+
+    const sendBtn = document.createElement("button");
+    sendBtn.textContent = "Send";
+    sendBtn.onclick = () => this.sendMessage();
+
+    this.fileInput = document.createElement("input");
+    this.fileInput.type = "file";
+
+    const sendFileBtn = document.createElement("button");
+    sendFileBtn.textContent = "Send File";
+    sendFileBtn.onclick = () => this.sendFile();
+
+    inputBar.appendChild(this.textInput);
+    inputBar.appendChild(sendBtn);
+    inputBar.appendChild(this.fileInput);
+    inputBar.appendChild(sendFileBtn);
+    this.overlay.appendChild(inputBar);
+  }
+
+  async sendMessage() {
+    const text = this.textInput.value;
+    if (!text) return;
+    this.textInput.value = "";
+
+    await fetch(this.api, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type: "chat", payload: { text } })
+    });
+  }
+
+  async sendFile() {
+    const file = this.fileInput.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = async () => {
+      const base64 = reader.result.split(",")[1]; // Base64 only
+      const msg = `<file>${file.name}; ${file.type}; ${base64}</file>`;
+
+      await fetch(this.api, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "chat", payload: { text: msg } })
+      });
+    };
+    reader.readAsDataURL(file);
+    this.fileInput.value = "";
+  }
+
+  async pollEvents() {
+    try {
+      const res = await fetch(this.api, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "poll", payload: {} })
+      });
+      const events = await res.json();
+      events.forEach(e => this.addEvent(e));
+    } catch (e) {
+      console.error("ChaosChat poll failed", e);
+    }
+    setTimeout(() => this.pollEvents(), 500);
+  }
+
+  addEvent(event) {
+    const msg = event.payload?.text;
+    if (!msg || !this.chatBox) return;
+
+    const div = document.createElement("div");
+
+    // <file>name; type; base64</file>
+    const fileMatch = msg.match(/^<file>(.+); (.+); (.+)<\/file>$/);
+    if (fileMatch) {
+      const [_, name, type, base64] = fileMatch;
+      let el;
+      if (type.startsWith("image/")) {
+        el = document.createElement("img");
+        el.src = `data:${type};base64,${base64}`;
+        el.style.maxWidth = "100%";
+      } else if (type.startsWith("video/")) {
+        el = document.createElement("video");
+        el.src = `data:${type};base64,${base64}`;
+        el.controls = true;
+        el.style.maxWidth = "100%";
+      } else if (type.startsWith("audio/")) {
+        el = document.createElement("audio");
+        el.src = `data:${type};base64,${base64}`;
+        el.controls = true;
+      } else if (type === "application/pdf") {
+        el = document.createElement("iframe");
+        el.src = `data:${type};base64,${base64}`;
+        el.style.width = "100%";
+        el.style.height = "400px";
+      } else {
+        // Andere Dateien → Download-Link
+        el = document.createElement("a");
+        el.href = `data:${type};base64,${base64}`;
+        el.download = name;
+        el.textContent = `Download: ${name}`;
+      }
+      div.appendChild(el);
+    } else {
+      div.textContent = msg;
+    }
+
+    this.chatBox.appendChild(div);
+    this.chatBox.scrollTop = this.chatBox.scrollHeight;
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  new ChaosChat();
+});
+</script>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Maxi LingLing — Sei mutig, sei freundlich.</p>
-      <p class="small">Design: Simple & freundlich — Für Kinder und Junggebliebene.</p>
+      <p class="small">Design: Simple &amp; freundlich — Für Kinder und Junggebliebene.</p>
     </div>
   </footer>
-
-  <!-- Chaos Chat Script -->
-  <script>
-  class ChaosChat {
-    constructor(apiEndpoint = "https://tobiobis.pythonanywhere.com/api/chat") {
-      this.api = apiEndpoint;
-      this.initButton();
-      this.pollEvents();
-    }
-
-    initButton() {
-      this.button = document.createElement("button");
-      this.button.textContent = "Open Chaos Chat";
-      this.button.className = "chaos-chat-button";
-      document.body.appendChild(this.button);
-      this.button.addEventListener("click", () => this.openChat());
-    }
-
-    openChat() {
-      this.overlay = document.createElement("div");
-      this.overlay.className = "chaos-chat-overlay";
-      document.body.appendChild(this.overlay);
-
-      const header = document.createElement("div");
-      header.className = "chaos-chat-header";
-      header.innerHTML = "<strong>Chaos Chat</strong>";
-      const closeBtn = document.createElement("button");
-      closeBtn.textContent = "X";
-      closeBtn.onclick = () => this.overlay.remove();
-      header.appendChild(closeBtn);
-      this.overlay.appendChild(header);
-
-      this.chatBox = document.createElement("div");
-      this.chatBox.className = "chaos-chat-box";
-      this.overlay.appendChild(this.chatBox);
-
-      const inputBar = document.createElement("div");
-      inputBar.className = "chaos-chat-inputbar";
-
-      this.textInput = document.createElement("input");
-      this.textInput.type = "text";
-      this.textInput.placeholder = "Type chaos...";
-
-      const sendBtn = document.createElement("button");
-      sendBtn.textContent = "Send";
-      sendBtn.onclick = () => this.sendMessage();
-
-      this.fileInput = document.createElement("input");
-      this.fileInput.type = "file";
-
-      const sendFileBtn = document.createElement("button");
-      sendFileBtn.textContent = "Send File";
-      sendFileBtn.onclick = () => this.sendFile();
-
-      inputBar.appendChild(this.textInput);
-      inputBar.appendChild(sendBtn);
-      inputBar.appendChild(this.fileInput);
-      inputBar.appendChild(sendFileBtn);
-
-      this.overlay.appendChild(inputBar);
-    }
-
-    async sendMessage() {
-      const text = this.textInput.value.trim();
-      if (!text) return;
-      this.textInput.value = "";
-      await fetch(this.api, {
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({type:"chat", payload:{text}})
-      });
-    }
-
-    async sendFile() {
-      const file = this.fileInput.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = async () => {
-        const base64 = reader.result.split(",")[1];
-        const msg = `<file>${file.name}; ${file.type}; ${base64}</file>`;
-        await fetch(this.api, {
-          method:"POST",
-          headers:{"Content-Type":"application/json"},
-          body:JSON.stringify({type:"chat", payload:{text: msg}})
-        });
-      };
-      reader.readAsDataURL(file);
-      this.fileInput.value = "";
-    }
-
-    async pollEvents() {
-      try {
-        const res = await fetch(this.api, {
-          method:"POST",
-          headers:{"Content-Type":"application/json"},
-          body:JSON.stringify({type:"poll", payload:{}})
-        });
-        const events = await res.json();
-        events.forEach(e => this.addEvent(e));
-      } catch(e) { console.error("ChaosChat poll failed", e); }
-      setTimeout(() => this.pollEvents(), 500);
-    }
-
-    addEvent(event) {
-      const msg = event.payload?.text;
-      if (!msg || !this.chatBox) return;
-
-      const div = document.createElement("div");
-      div.style.marginBottom = "5px";
-
-      const fileMatch = msg.match(/^<file>(.+); (.+); (.+)<\/file>$/);
-      if (fileMatch) {
-        const [_, name, type, base64] = fileMatch;
-        let el;
-        if (type.startsWith("image/")) {
-          el = document.createElement("img");
-          el.src = `data:${type};base64,${base64}`;
-          el.style.maxWidth = "100%";
-        } else if (type.startsWith("video/")) {
-          el = document.createElement("video");
-          el.src = `data:${type};base64,${base64}`;
-          el.controls = true;
-          el.style.maxWidth = "100%";
-        } else if (type.startsWith("audio/")) {
-          el = document.createElement("audio");
-          el.src = `data:${type};base64,${base64}`;
-          el.controls = true;
-        } else if (type === "application/pdf") {
-          el = document.createElement("iframe");
-          el.src = `data:${type};base64,${base64}`;
-          el.style.width="100%";
-          el.style.height="400px";
-        } else {
-          el = document.createElement("a");
-          el.href = `data:${type};base64,${base64}`;
-          el.download = name;
-          el.textContent = `Download: ${name}`;
-        }
-        div.appendChild(el);
-      } else {
-        div.textContent = msg;
-      }
-
-      this.chatBox.appendChild(div);
-      this.chatBox.scrollTop = this.chatBox.scrollHeight;
-    }
-  }
-
-  window.addEventListener("DOMContentLoaded", () => new ChaosChat());
-  </script>
 
   <script src="script.js"></script>
 </body>
