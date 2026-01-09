@@ -195,7 +195,7 @@ const quizQuestions = [
   {
     question: "Welche Farbe bekommt Maxi, wenn Jenni in der Nähe ist?",
     options: ["Rosa", "Rot", "Blau-schwarz", "Grün"],
-    correct: 2
+    correct: 1
   }
 ];
 
